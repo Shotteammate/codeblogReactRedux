@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addPost } from '../../actions/postActions';
 
 class AddPost extends Component {
   state = {
@@ -8,7 +10,8 @@ class AddPost extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    //console.log(this.state);
+    this.props.addPost(this.state);
   }
 
   handleOnChange = (e) => {
@@ -26,7 +29,7 @@ class AddPost extends Component {
           </div>
           <div className="input-field">
             <label>Content</label>
-            <textarea className='materialize-textarea' name='content'  onChange={this.handleOnChange}></textarea>
+            <textarea className='materialize-textarea' name='content' onChange={this.handleOnChange}></textarea>
           </div>
           <div className="input-field">
             <button className="btn blue darken-2 z-depth-0">Add</button>
@@ -37,5 +40,9 @@ class AddPost extends Component {
   }
 }
 
-export default AddPost;
+const mapDispatch = {
+  addPost: addPost
+}
+
+export default connect(null, mapDispatch)(AddPost);
 
