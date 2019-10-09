@@ -1,21 +1,20 @@
-import {ADD_POST} from '../actions/types';
+import { ADD_POST, ADD_POST_ERROR } from '../actions/types';
 
 const initialState = {
-  posts: [
-    {id: 1, title: 'test1', content:'testing content 1'},
-    {id: 2, title: 'test2', content:'testing content 2'},
-    {id: 3, title: 'test3', content:'testing content 3'}
-  ]
+  posts: []         //delete dummy data since Dashboard mapState issue
 };
 
 const postReducer = (state = initialState, action) => {
-  switch(action.type){
+  switch (action.type) {
     case ADD_POST:
       console.log("Add post", action.post);
+      return state;
+    case ADD_POST_ERROR:
+      console.log("Add post error", action.err);
       return state;
     default:
       return state;
   }
-} 
+}
 
 export default postReducer;

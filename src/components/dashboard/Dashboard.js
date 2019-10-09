@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PostsList from '../posts/PostsList';
 import Profile from './Profile';
-import {connect} from 'react-redux';
-
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 class Dashboard extends Component {
   render() {
     //console.log(this.props);
-    const {posts} = this.props;
+    const { posts } = this.props;
 
     return (
       <div className='container'>
@@ -25,8 +26,20 @@ class Dashboard extends Component {
 }
 
 //state is the whole store
-const mapState = (state) => ({
-  posts: state.postRD.posts
-});
+const mapState = (state) => {
+  //console.log(state);
+  return {
+    posts: state.firestoreRD.ordered.posts||state.postRD.posts 
+    /* getting a "TypeError: Cannot read property 'map' of undefined". 
+    This is because on the initial rendering firestore hasn't had a chance to grab the latest data. 
+    You can see the console.log(state) inside mapStateToProps and see that the ordered object is empty initially. 
+    To combat this issue, you need to pass a fallback content when mapping state to props */
+  }
+};
 
-export default connect(mapState)(Dashboard);
+export default compose(
+  connect(mapState),
+  firestoreConnect([          // mapState of Firebase
+    { collection: 'posts' }
+  ])
+)(Dashboard);
