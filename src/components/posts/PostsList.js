@@ -1,15 +1,15 @@
 import React from 'react';
 import Post from './Post';
+import { Link } from 'react-router-dom';
 
 const PostsList = ({ posts }) => {
-  console.log(posts);
+ // console.log(posts);
   // should add a flag to check whether the "posts" props is null or not to prevent Dashboard issue
 
-  const list = posts.map((post)=>(
-    <Post 
-      key={post.id} 
-      title={post.title}
-    />
+  const list = posts.map((post) => (
+    <Link to={'/post/' + post.id} key={post.id} >
+      <Post title={post.title} />
+    </Link>
   ));
 
   // only render the list if posts exist

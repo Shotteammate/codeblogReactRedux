@@ -16,3 +16,4 @@ export const addPost = (post) => (dispatch) => {
     dispatch({ type: ADD_POST_ERROR, err: err })
   })
 };
+

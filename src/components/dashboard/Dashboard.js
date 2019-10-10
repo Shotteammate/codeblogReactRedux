@@ -4,12 +4,15 @@ import Profile from './Profile';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import {Redirect} from 'react-router-dom';
 
 class Dashboard extends Component {
   render() {
     //console.log(this.props);
-    const { posts } = this.props;
+    const { posts, auth } = this.props;
 
+    if(!auth.uid) return <Redirect to='/signin' />
+    
     return (
       <div className='container'>
         <div className="row">
@@ -29,6 +32,7 @@ class Dashboard extends Component {
 const mapState = (state) => {
   //console.log(state);
   return {
+    auth: state.firebaseRD.auth,
     posts: state.firestoreRD.ordered.posts||state.postRD.posts 
     /* getting a "TypeError: Cannot read property 'map' of undefined". 
     This is because on the initial rendering firestore hasn't had a chance to grab the latest data. 
