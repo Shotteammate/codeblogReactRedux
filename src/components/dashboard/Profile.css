@@ -124,7 +124,7 @@
 .LinkedInImg {
   margin: auto 15px auto 0px;
   background-color: blueviolet;
-  background-image: url(/img/linkedIn-img.png);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/codeblog-70639.appspot.com/o/linkedIn-img.png?alt=media&token=1e85a907-569d-45bd-8b63-aa16c573f7a2');
   background-size: auto 100%;
   width: 30px;
   height: 30px;
@@ -132,7 +132,7 @@
 .EmailImg {
   margin: auto 15px auto 0px;
   background-color: white;
-  background-image: url(/img/email-img.png);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/codeblog-70639.appspot.com/o/email-img.png?alt=media&token=ede7e011-cadb-4a87-b6ed-3d5f63307421');
   background-size: auto 100%;
   width: 30px;
   height: 30px;

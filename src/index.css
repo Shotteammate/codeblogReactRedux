@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/img/codeblog-bg.jpg);
+  background: url("https://firebasestorage.googleapis.com/v0/b/codeblog-70639.appspot.com/o/codeblog-bg.jpg?alt=media&token=7c7599cc-ca0b-4ad8-b837-2bd0287cc623");
   background-size: 100%;
   background-color: aqua;
   min-height: 100%;

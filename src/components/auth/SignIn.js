@@ -16,7 +16,7 @@ class SignIn extends Component {
     this.props.signIn(this.state);
     //redirect to home page
     //console.log(this.props);
-    this.props.history.push('/');
+    this.props.history.push('/codeblogRedux');
   }
 
   handleOnChange = (e) => {
@@ -25,7 +25,7 @@ class SignIn extends Component {
 
   render() {
     const { authError, auth } = this.props;
-    if(auth.uid) return <Redirect to='/' />
+    if(auth.uid) return <Redirect to='/codeblogRedux' />
 
     return (
       <div className='container navbarFixSignIn'>

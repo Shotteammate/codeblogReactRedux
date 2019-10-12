@@ -15,7 +15,7 @@ class AddPost extends Component {
     //console.log(this.props.profile);
     this.props.addPost(this.state, this.props.profile);
     //redirect
-    this.props.history.push('/');
+    this.props.history.push('/codeblogRedux');
   }
 
   handleOnChange = (e) => {
