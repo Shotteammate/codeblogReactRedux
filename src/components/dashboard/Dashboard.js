@@ -8,8 +8,9 @@ import {Redirect} from 'react-router-dom';
 
 class Dashboard extends Component {
   render() {
-    //console.log(this.props);
+    //console.log(this.props.posts);
     const { posts, auth } = this.props;
+    //const reversePosts = posts.reverse(); //reverse posts, new post comes first
 
     if(!auth.uid) return <Redirect to='/signin' />
     
@@ -33,11 +34,7 @@ const mapState = (state) => {
   //console.log(state);
   return {
     auth: state.firebaseRD.auth,
-    posts: state.firestoreRD.ordered.posts||state.postRD.posts 
-    /* getting a "TypeError: Cannot read property 'map' of undefined". 
-    This is because on the initial rendering firestore hasn't had a chance to grab the latest data. 
-    You can see the console.log(state) inside mapStateToProps and see that the ordered object is empty initially. 
-    To combat this issue, you need to pass a fallback content when mapping state to props */
+    posts: state.firestoreRD.ordered.posts||state.postRD.posts, /* getting a "TypeError: Cannot read property 'map' of undefined". This is because on the initial rendering firestore hasn't had a chance to grab the latest data. You can see the console.log(state) inside mapStateToProps and see that the ordered object is empty initially. To combat this issue, you need to pass a fallback content when mapping state to props */
   }
 };
 

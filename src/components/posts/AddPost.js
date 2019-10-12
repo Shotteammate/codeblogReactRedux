@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../../actions/postActions';
 import {Redirect} from 'react-router-dom';
+import '../layout/Navbar.css';
 
 class AddPost extends Component {
   state = {
@@ -11,8 +12,10 @@ class AddPost extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault();
-    //console.log(this.state);
-    this.props.addPost(this.state);
+    //console.log(this.props.profile);
+    this.props.addPost(this.state, this.props.profile);
+    //redirect
+    this.props.history.push('/');
   }
 
   handleOnChange = (e) => {
@@ -24,7 +27,7 @@ class AddPost extends Component {
     if(!auth.uid) return <Redirect to='/signin' />
 
     return (
-      <div className='container'>
+      <div className='container navbarFixSignIn'>
         <form onSubmit={this.handleOnSubmit} className="white">
           <h5 className="grey-text tex-darken-3">Add Post</h5>
           <div className="input-field">
@@ -44,9 +47,13 @@ class AddPost extends Component {
   }
 }
 
-const mapState = (state) => ({
-  auth: state.firebaseRD.auth
-})
+const mapState = (state) => {
+  //console.log(state);
+  return {
+    auth: state.firebaseRD.auth,
+    profile: state.firebaseRD.profile
+  };
+}
 
 const mapDispatch = {
   addPost: addPost

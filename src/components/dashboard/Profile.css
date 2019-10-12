@@ -1,6 +1,158 @@
 .profileStyle {
   border-radius: 15px 15px 15px 15px; 
-  height: 400px;
+  height: 305px;
   width: 230px;
+  margin-top: 21px;
+  text-align: center;
+}
+
+.profileStyle h6 {
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.btnWrapper{
+  width: 180px;
+  height: 180px;
+  margin: auto auto;
+  padding: 15px 0 10px 0;
+}
+
+.profile-photo {
+  display:block;
+  margin:auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  padding: 0 auto;
+  cursor: pointer;
+  border: 1px solid white;
+  box-shadow: gray 0 0 10px;
+}
+
+
+/*profile-info*/
+.profile-info-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+/* this is the "." (content: '\00B7') using CSS ::after Selector for class="inline-block" */
+.inline-block::after {
+  content: '\00B7';
+  margin: 0;
+  padding: 0 4px;
+  color: #000;
+  font-weight: 400;
+}
+
+.myname {
   margin-top: 20px;
 }
+.inline-block {
+  display: inline-block!important;
+}
+
+.t-normal {
+  font-weight: 400;
+}
+
+.t-black {
+  color: rgba(0,0,0,.9);
+}
+
+.t-16 {
+  font-size: 1.6rem;
+  line-height: 1.33333;
+  padding-top: 5px;
+}
+.t-15 {
+  font-size: 1.5rem;
+  line-height: 1.33333;
+}
+
+.t-12 {
+  font-size: 1.2rem;
+  line-height: 1.33333;
+}
+.t-11 {
+  font-size: 1.1rem;
+  line-height: 1.33333;
+}
+
+.t-bold {
+  font-weight: 600;
+  color: #0073b1;
+  cursor: pointer;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  min-height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 8% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width:70%;
+  max-width: 552px; /* Could be more or less, depending on screen size */
+}
+
+.contactList {
+  display: flex;
+  flex-direction: row 
+}
+
+.contactList ul li a {
+  cursor: pointer;
+}
+
+.LinkedInImg {
+  margin: auto 15px auto 0px;
+  background-color: blueviolet;
+  background-image: url(/img/linkedIn-img.png);
+  background-size: auto 100%;
+  width: 30px;
+  height: 30px;
+}
+.EmailImg {
+  margin: auto 15px auto 0px;
+  background-color: white;
+  background-image: url(/img/email-img.png);
+  background-size: auto 100%;
+  width: 30px;
+  height: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+

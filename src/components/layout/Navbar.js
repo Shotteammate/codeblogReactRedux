@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import SignInLink from './SignInLink';
 import SignOutLink from './SignOutLink';
 import { connect } from 'react-redux';
+import './Navbar.css';
 
 const Navbar = (props) => {
   const { auth, profile } = props;
   //console.log(props);
 
   return (
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="nav-wrapper grey darken-3 navBar">
       <div className="container">
         <Link to='/' className='brand-logo'>Code Blog</Link>
         {auth.uid ? <SignInLink profile={profile}/> : <SignOutLink />}
@@ -19,7 +20,7 @@ const Navbar = (props) => {
 }
 
 const mapState = (state) => {
-  console.log(state);
+  //console.log(state);
   return {
     auth: state.firebaseRD.auth,
     profile: state.firebaseRD.profile

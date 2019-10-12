@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Switch>
+        <Switch >
           <Route exact path='/' component={Dashboard} />
           <Route path='/post/:id' component={PostDetail} />
           <Route path='/signin' component={SignIn} />

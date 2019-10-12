@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../actions/authActions';
 import { Redirect } from 'react-router-dom';
+import '../layout/Navbar.css';
 
 class SignIn extends Component {
   state = {
@@ -27,7 +28,7 @@ class SignIn extends Component {
     if(auth.uid) return <Redirect to='/' />
 
     return (
-      <div className='container'>
+      <div className='container navbarFixSignIn'>
         <form onSubmit={this.handleOnSubmit} className="white">
           <h5 className="grey-text tex-darken-3">Sign In</h5>
           <div className="input-field">

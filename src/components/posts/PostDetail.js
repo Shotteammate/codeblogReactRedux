@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import {Redirect} from 'react-router-dom';
+import moment from 'moment';
+import '../layout/Navbar.css';
 
 const PostDetail = (props) => {
   //console.log(props);
@@ -14,15 +16,15 @@ const PostDetail = (props) => {
   //check post exist
   if(post){
     return (
-      <div className='container section'>
-        <div className="card z-depth-0">
+      <div className='container section navbarFixPostDetail'>
+        <div className="card z-depth-0 postDetailStyle">
           <div className="card-content">
             <span className="card-title">{post.title}</span>
             <p>{post.content}</p>
           </div>
           <div className="card-action grey lighten-4 grey-text">
             <div>Posted by: {post.firstName} {post.lastName}</div>
-            <div>test date: {post.createAt.toString()}</div>
+            <div>test date: {moment(post.createAt.toDate().toString()).format('LLL')}</div>
           </div>
         </div>
       </div>
