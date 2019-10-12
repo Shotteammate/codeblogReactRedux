@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch >
-          <Route exact path='/' component={Dashboard} />
+          <Route exact path='/codeblogRedux' component={Dashboard} />
           <Route path='/post/:id' component={PostDetail} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
