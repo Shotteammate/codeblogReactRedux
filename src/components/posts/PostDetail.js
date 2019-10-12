@@ -11,7 +11,7 @@ const PostDetail = (props) => {
   // we can only get props-id, then use the id to fetch other data online (in this case: connect to Firestore)
   //const id = props.match.params.id;
   const { post, auth } = props; 
-  if(!auth.uid) return <Redirect to='/signin' />
+  if(!auth.uid) return <Redirect to='/codeblogRedux/signin' />
 
   //check post exist
   if(post){

@@ -3,11 +3,17 @@ import './Profile.css';
 
 const Profile = () => {
   // Get the modal
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
 
   // When the user clicks on the button, open the modal
   const handleOpenModalBox = () => {
-    modal.style.display = "block";
+    if(modal){
+      modal.style.display = "block";
+    }else {
+      modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      //console.log("the style not onload: "+modal);
+    }
   }
 
   // When the user clicks on <span> (x), close the modal

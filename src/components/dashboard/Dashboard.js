@@ -12,7 +12,7 @@ class Dashboard extends Component {
     const { posts, auth } = this.props;
     //const reversePosts = posts.reverse(); //reverse posts, new post comes first
 
-    if(!auth.uid) return <Redirect to='/signin' />
+    if(!auth.uid) return <Redirect to='/codeblogRedux/signin' />
     
     return (
       <div className='container'>

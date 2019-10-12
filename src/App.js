@@ -14,10 +14,10 @@ function App() {
         <Navbar />
         <Switch >
           <Route exact path='/codeblogRedux' component={Dashboard} />
-          <Route path='/post/:id' component={PostDetail} />
-          <Route path='/signin' component={SignIn} />
-          <Route path='/signup' component={SignUp} />
-          <Route path='/addpost' component={AddPost} />
+          <Route path='/codeblogRedux/post/:id' component={PostDetail} />
+          <Route path='/codeblogRedux/signin' component={SignIn} />
+          <Route path='/codeblogRedux/signup' component={SignUp} />
+          <Route path='/codeblogRedux/addpost' component={AddPost} />
         </Switch>
       </div>
     </BrowserRouter>

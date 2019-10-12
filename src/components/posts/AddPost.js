@@ -24,7 +24,7 @@ class AddPost extends Component {
 
   render() {
     const {auth} = this.props;
-    if(!auth.uid) return <Redirect to='/signin' />
+    if(!auth.uid) return <Redirect to='/codeblogRedux/signin' />
 
     return (
       <div className='container navbarFixSignIn'>

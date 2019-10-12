@@ -7,7 +7,7 @@ const PostsList = ({ posts }) => {
   // should add a flag to check whether the "posts" props is null or not to prevent Dashboard issue
 
   const list = posts.map((post) => (
-    <Link to={'/post/' + post.id} key={post.id} >
+    <Link to={'/codeblogRedux/post/' + post.id} key={post.id} >
       <Post title={post.title} post={post} />
     </Link>
   ));
