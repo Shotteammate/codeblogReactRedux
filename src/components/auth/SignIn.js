@@ -16,7 +16,7 @@ class SignIn extends Component {
     this.props.signIn(this.state);
     //redirect to home page
     //console.log(this.props);
-    this.props.history.push('/codeblogRedux/dashboard');
+    this.props.history.push('/codeblogRedux');
   }
 
   handleOnChange = (e) => {

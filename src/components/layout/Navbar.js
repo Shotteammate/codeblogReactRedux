@@ -12,7 +12,7 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper grey darken-3 navBar">
       <div className="container">
-        <Link to='/codeblogRedux/dashboard' className='brand-logo'>Code Blog</Link>
+        <Link to='/codeblogRedux' className='brand-logo'>Code Blog</Link>
         {auth.uid ? <SignInLink profile={profile}/> : <SignOutLink />}
       </div>
     </nav>
