@@ -15,7 +15,7 @@ class AddPost extends Component {
     //console.log(this.props.profile);
     this.props.addPost(this.state, this.props.profile);
     //redirect
-    this.props.history.push('/codeblogRedux');
+    this.props.history.push('/codeblogRedux/dashboard');
   }
 
   handleOnChange = (e) => {
@@ -24,7 +24,7 @@ class AddPost extends Component {
 
   render() {
     const {auth} = this.props;
-    if(!auth.uid) return <Redirect to='/codeblogRedux/signin' />
+    if(!auth.uid) return <Redirect to='/codeblogRedux' />
 
     return (
       <div className='container navbarFixSignIn'>
