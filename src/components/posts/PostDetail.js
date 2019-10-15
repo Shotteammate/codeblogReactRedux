@@ -4,7 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import {Redirect} from 'react-router-dom';
 import moment from 'moment';
-import '../layout/Navbar.css';
+import './PostDetail.css';
 
 const PostDetail = (props) => {
   //console.log(props);

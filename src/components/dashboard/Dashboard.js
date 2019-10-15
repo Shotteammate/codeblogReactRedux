@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import {Redirect} from 'react-router-dom';
+import './Dashboard.css';
 
 class Dashboard extends Component {
   render() {
@@ -15,7 +16,7 @@ class Dashboard extends Component {
     if(!auth.uid) return <Redirect to='/codeblogReactRedux/signin' />
     
     return (
-      <div className='container'>
+      <div className='container dashboard'>
         <div className="row">
           <div className="col s12 m4">
             <Profile />

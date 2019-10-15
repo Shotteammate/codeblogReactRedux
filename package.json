@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase": "^7.1.0",
     "gh-pages": "^2.1.1",
+    "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.24.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
