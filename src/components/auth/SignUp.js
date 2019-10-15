@@ -24,7 +24,7 @@ class SignUp extends Component {
 
   render() {
     const { auth, authError } = this.props;
-    if (auth.uid) return <Redirect to='/codeblogRedux' />
+    if (auth.uid) return <Redirect to='/codeblogReactRedux' />
 
     return (
       <div className='container navbarFixSignIn'>

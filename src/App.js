@@ -13,11 +13,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch >
-          <Route exact path='/codeblogRedux' component={Dashboard} />
-          <Route path='/codeblogRedux/post/:id' component={PostDetail} />
-          <Route path='/codeblogRedux/signin' component={SignIn} />
-          <Route path='/codeblogRedux/signup' component={SignUp} />
-          <Route path='/codeblogRedux/addpost' component={AddPost} />
+          <Route exact path='/codeblogReactRedux' component={Dashboard} />
+          <Route path='/codeblogReactRedux/post/:id' component={PostDetail} />
+          <Route path='/codeblogReactRedux/signin' component={SignIn} />
+          <Route path='/codeblogReactRedux/signup' component={SignUp} />
+          <Route path='/codeblogReactRedux/addpost' component={AddPost} />
         </Switch>
       </div>
     </BrowserRouter>
